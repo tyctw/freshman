@@ -1,0 +1,8 @@
+{
+  "name": "準高中生導航：高中生活指南",
+  "description": "專為考完會考、準備升上高中的新生設計的報到與入學準備指南網站。",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
