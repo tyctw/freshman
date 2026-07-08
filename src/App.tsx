@@ -10,7 +10,7 @@ import TimeCalculatorPage from './pages/TimeCalculatorPage';
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/freshman">
       <div className="min-h-screen bg-[#FFFBEB] font-sans text-[#1E293B] selection:bg-[#FBBF24] selection:text-white">
         <Navbar />
         <Routes>
