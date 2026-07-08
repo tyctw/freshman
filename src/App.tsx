@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -31,7 +31,7 @@ function ScrollHandler() {
 
 export default function App() {
   return (
-    <Router basename="/freshman">
+    <Router>
       <ScrollHandler />
       <div className="min-h-screen bg-[#FFFBEB] font-sans text-[#1E293B] selection:bg-[#FBBF24] selection:text-white">
 
