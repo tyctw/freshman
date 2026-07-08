@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Sparkles, ArrowRight } from 'lucide-react';
+import { HashLink } from 'react-router-hash-link';
 import Countdown from './Countdown';
 
 export default function Hero() {
@@ -48,19 +49,21 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 pt-4"
           >
-            <a
-              href="#academics"
+            <HashLink
+              smooth
+              to="/academic-comparison#academics"
               className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 sm:px-8 text-base text-[#F43F5E] bg-white rounded-full font-black shadow-[4px_4px_0px_0px_#9F1239] md:shadow-[6px_6px_0px_0px_#9F1239] active:translate-y-[2px] md:hover:translate-y-0.5 active:shadow-none transition-all"
             >
-              了解課堂變化
+              學習模式大翻轉
               <ArrowRight className="w-5 h-5 ml-2 font-black" />
-            </a>
-            <a
-              href="#checklist"
+            </HashLink>
+            <HashLink
+              smooth
+              to="/#survival"
               className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 sm:px-8 text-base text-white bg-[#F59E0B] border-4 border-[#FBBF24] rounded-full font-black shadow-[4px_4px_0px_0px_#78350F] md:shadow-[6px_6px_0px_0px_#78350F] active:translate-y-[2px] md:hover:translate-y-0.5 active:shadow-none transition-all"
             >
-              查看暑假任務清單
-            </a>
+              學長姐的血淚生存法則
+            </HashLink>
           </motion.div>
         </div>
       </div>

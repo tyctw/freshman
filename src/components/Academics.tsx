@@ -1,5 +1,7 @@
 import { motion } from 'motion/react';
 import { BookOpen, TrendingUp, Layers, PenTool } from 'lucide-react';
+import { HashLink } from 'react-router-hash-link';
+import NextSteps from './NextSteps';
 
 const features = [
   {
@@ -49,7 +51,7 @@ export default function Academics() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 p-2 sm:p-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 p-2 sm:p-4 mb-12">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -71,6 +73,55 @@ export default function Academics() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto bg-[#F0FDF4] border-4 border-[#16A34A] rounded-3xl p-6 md:p-8 shadow-[6px_6px_0px_0px_#16A34A] flex flex-col md:flex-row items-center gap-6"
+        >
+          <div className="flex-1">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#16A34A] text-white text-sm font-bold rounded-full mb-4">
+              <span className="text-lg">⏰</span> 推薦工具
+            </div>
+            <h3 className="text-2xl font-black text-[#1E293B] mb-3">
+              大考倒數 & 每日一點讀書
+            </h3>
+            <p className="text-slate-700 font-bold leading-relaxed mb-4">
+              高中的課業需要長期抗戰，不要等到段考前才抱佛腳！每天撥出一點時間「每日一點讀書」，累積起來的能量會非常驚人。推薦使用大考倒數工具，幫助你隨時掌握重要考試的剩餘天數，規劃專屬的讀書進度。
+            </p>
+            <a
+              href="https://ceecc.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-[#1E293B] text-white px-6 py-3 rounded-full font-bold shadow-[4px_4px_0px_0px_#16A34A] hover:-translate-y-1 transition-all active:translate-y-[2px] active:shadow-none"
+            >
+              開啟大考倒數
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+          <div className="hidden md:flex w-32 h-32 bg-white rounded-full border-4 border-[#16A34A] flex-shrink-0 items-center justify-center text-5xl shadow-inner">
+            📚
+          </div>
+        </motion.div>
+        <NextSteps steps={[
+          {
+            title: '社團選擇指南',
+            desc: '康樂、學術、服務、體育，哪一種適合你？',
+            link: '/club-selection',
+            color: 'text-[#16A34A]',
+            borderColor: 'border-[#14532D]',
+            icon: '🎯'
+          },
+          {
+            title: '學長姐的血淚生存法則',
+            desc: '有些事老師不會教，但你一定要知道！',
+            link: '/#survival',
+            color: 'text-[#F59E0B]',
+            borderColor: 'border-[#78350F]',
+            icon: '⚠️'
+          }
+        ]} />
       </div>
     </section>
   );

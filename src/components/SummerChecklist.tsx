@@ -1,6 +1,8 @@
 import { motion } from 'motion/react';
 import { useState } from 'react';
 import { Check, Info } from 'lucide-react';
+import { HashLink } from 'react-router-hash-link';
+import NextSteps from './NextSteps';
 
 const tasks = [
   {
@@ -32,6 +34,24 @@ const tasks = [
     title: '學一項一直想學的技能',
     category: '自我成長',
     desc: '剪輯影片、寫一點程式、學吉他、或者把一份食譜煮得很好吃。這些都會成為你高中的養分。'
+  },
+  {
+    id: 6,
+    title: '規劃通勤與住宿',
+    category: '入學準備',
+    desc: '確認上學的交通路線與接駁工具，或是需要住宿租屋。'
+  },
+  {
+    id: 7,
+    title: '認識校園周邊',
+    category: '入學準備',
+    desc: '實際走訪認識校園附近環境與生活機能，以備不時之需。'
+  },
+  {
+    id: 8,
+    title: '詳閱學校網站與規範',
+    category: '入學準備',
+    desc: '點閱學校網站，除了了解學校生活作息、例行活動，掌握學校公布的重要訊息、有哪些資源可以運用之外，也要詳細閱讀學校相關規範與規定，才不會一進學校就誤踩地雷。'
   }
 ];
 
@@ -128,6 +148,25 @@ export default function SummerChecklist() {
             孩子剛結束高壓的國三生活。給他們一點喘息的空間與選擇權，讓他們為自己安排暑假，這也是「自主負責」的最好練習。高中生活，需要家長從「指導者」轉變成「陪伴者」。
           </p>
         </motion.div>
+
+        <NextSteps steps={[
+          {
+            title: '高一時間管理計算機',
+            desc: '看看你一週剩下多少自由時間？',
+            link: '/time-calculator',
+            color: 'text-[#9333EA]',
+            borderColor: 'border-[#581C87]',
+            icon: '⏱️'
+          },
+          {
+            title: '高中 VS 高職 差異比較',
+            desc: '到底哪裡不一樣？學習模式大解析',
+            link: '/academic-comparison',
+            color: 'text-[#F43F5E]',
+            borderColor: 'border-[#9F1239]',
+            icon: '⚖️'
+          }
+        ]} />
       </div>
     </section>
   );

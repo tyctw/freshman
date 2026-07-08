@@ -13,7 +13,6 @@ export default function Footer() {
           </div>
           <p className="text-slate-300 font-bold text-sm">
             本站由「會考落點分析系統」監製
-            <br />給所有即將邁入人生新階段的女孩、男孩們。未來無限可能。
           </p>
         </div>
         
