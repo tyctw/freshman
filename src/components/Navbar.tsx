@@ -53,12 +53,12 @@ export default function Navbar() {
               ))}
             </div>
             <a href="https://tyctw.github.io/shared/" target="_blank" rel="noopener noreferrer" className="bg-white border-2 border-[#1E293B] text-[#1E293B] px-4 py-2 rounded-full font-bold text-sm shadow-[4px_4px_0px_0px_#1E293B] hover:translate-y-0.5 active:shadow-none transition-all flex items-center gap-2">
-              <span>會錄取分享</span>
+              <span>會考錄取分享</span>
             </a>
           </div>
           <div className="lg:hidden flex items-center gap-3">
              <a href="https://tyctw.github.io/shared/" target="_blank" rel="noopener noreferrer" className="bg-[#1E293B] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-bold shadow-[2px_2px_0px_0px_#FBBF24] active:shadow-none active:translate-y-[2px] transition-all">
-               會錄取分享
+               會考錄取分享
              </a>
              <button 
                onClick={() => setIsOpen(!isOpen)}
