@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Sparkles, ArrowRight } from 'lucide-react';
+import { Sparkles, ArrowRight, Dices } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Countdown from './Countdown';
 
@@ -54,7 +54,14 @@ export default function Hero() {
               className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 sm:px-8 text-base text-[#1E293B] bg-[#FBBF24] border-4 border-[#1E293B] rounded-full font-black shadow-[4px_4px_0px_0px_#1E293B] md:shadow-[6px_6px_0px_0px_#1E293B] active:translate-y-[2px] md:hover:translate-y-0.5 active:shadow-none transition-all"
             >
               <Sparkles className="w-5 h-5 mr-2 stroke-[3]" />
-              測測看！高中生屬性鑑定
+              高中生屬性鑑定
+            </Link>
+            <Link
+              to="/classmate-gacha"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 sm:px-8 text-base text-white bg-indigo-500 border-4 border-indigo-700 rounded-full font-black shadow-[4px_4px_0px_0px_#4338CA] md:shadow-[6px_6px_0px_0px_#4338CA] active:translate-y-[2px] md:hover:translate-y-0.5 active:shadow-none transition-all"
+            >
+              <Dices className="w-5 h-5 mr-2 stroke-[3]" />
+              奇葩同學轉蛋
             </Link>
             <Link
               to="/academic-comparison#academics"

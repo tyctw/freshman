@@ -9,6 +9,8 @@ import ClubPitfallsPage from './pages/ClubPitfallsPage';
 import FAQPage from './pages/FAQPage';
 import TimeCalculatorPage from './pages/TimeCalculatorPage';
 import PersonaQuizPage from './pages/PersonaQuizPage';
+import ClassmateGachaPage from './pages/ClassmateGachaPage';
+import ExcuseGeneratorPage from './pages/ExcuseGeneratorPage';
 
 function ScrollHandler() {
   const { pathname, hash } = useLocation();
@@ -40,6 +42,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/persona" element={<PersonaQuizPage />} />
+          <Route path="/classmate-gacha" element={<ClassmateGachaPage />} />
+          <Route path="/excuse-generator" element={<ExcuseGeneratorPage />} />
           <Route path="/academic-comparison" element={<AcademicComparisonPage />} />
           <Route path="/club-selection" element={<ClubSelectionPage />} />
           <Route path="/club-pitfalls" element={<ClubPitfallsPage />} />

@@ -1,11 +1,13 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { BookOpen, Map, Compass, CheckCircle, Menu, X, GitCompare, Zap, AlertTriangle, HelpCircle, Clock, Sparkles } from 'lucide-react';
+import { BookOpen, Map, Compass, CheckCircle, Menu, X, GitCompare, Zap, AlertTriangle, HelpCircle, Clock, Sparkles, Dices, FileWarning } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const navItems = [
   { name: '首頁', href: '/', icon: Compass },
   { name: '屬性鑑定', href: '/persona', icon: Sparkles },
+  { name: '同學轉蛋', href: '/classmate-gacha', icon: Dices },
+  { name: '遲到理由', href: '/excuse-generator', icon: FileWarning },
   { name: '高中 VS 高職', href: '/academic-comparison', icon: GitCompare },
   { name: '社團選擇', href: '/club-selection', icon: CheckCircle },
   { name: '社團避雷', href: '/club-pitfalls', icon: Zap },
