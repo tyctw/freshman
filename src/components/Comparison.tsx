@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { GitCompare, BookOpen, GraduationCap, ExternalLink, ArrowLeft } from 'lucide-react';
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 const academicsComparison = [
   {
@@ -71,14 +71,13 @@ export default function Comparison() {
     <section id="comparison" className="py-20 md:py-24 bg-[#047857] text-white border-y-4 border-[#022C22] overflow-hidden" aria-labelledby="comparison-title">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="mb-8 md:absolute md:top-0 md:left-4 lg:left-8 z-10 flex justify-start">
-          <HashLink
-            smooth
+          <Link
             to="/#hero"
             className="inline-flex items-center gap-2 bg-white text-[#047857] hover:bg-[#FBBF24] hover:text-[#78350F] font-black text-base sm:text-lg transition-all border-4 border-[#022C22] px-5 py-2.5 rounded-full shadow-[4px_4px_0px_0px_#022C22] active:translate-y-[2px] active:shadow-none"
           >
             <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6 stroke-[3]" />
             返回主頁
-          </HashLink>
+          </Link>
         </div>
 
         <div className="text-center mb-12 flex flex-col items-center">

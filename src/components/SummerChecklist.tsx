@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { useState } from 'react';
 import { Check, Info } from 'lucide-react';
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 import NextSteps from './NextSteps';
 
 const tasks = [

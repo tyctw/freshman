@@ -8,6 +8,7 @@ import ClubSelectionPage from './pages/ClubSelectionPage';
 import ClubPitfallsPage from './pages/ClubPitfallsPage';
 import FAQPage from './pages/FAQPage';
 import TimeCalculatorPage from './pages/TimeCalculatorPage';
+import PersonaQuizPage from './pages/PersonaQuizPage';
 
 function ScrollHandler() {
   const { pathname, hash } = useLocation();
@@ -38,6 +39,7 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/persona" element={<PersonaQuizPage />} />
           <Route path="/academic-comparison" element={<AcademicComparisonPage />} />
           <Route path="/club-selection" element={<ClubSelectionPage />} />
           <Route path="/club-pitfalls" element={<ClubPitfallsPage />} />

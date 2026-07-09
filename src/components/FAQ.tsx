@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { HelpCircle, ChevronDown, ArrowLeft } from 'lucide-react';
 import { useState } from 'react';
 
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 import NextSteps from './NextSteps';
 
 export default function FAQ() {
@@ -35,14 +35,13 @@ export default function FAQ() {
     <section id="faq" className="py-20 md:py-24 bg-[#E0F2FE] text-[#1E293B] border-y-4 border-[#0284C7] overflow-hidden min-h-screen" aria-labelledby="faq-title">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="mb-8 flex justify-start">
-          <HashLink
-            smooth
+          <Link
             to="/#hero"
             className="inline-flex items-center gap-2 bg-white text-[#0284C7] hover:bg-[#FBBF24] hover:text-[#78350F] font-black text-base sm:text-lg transition-all border-4 border-[#0369A1] px-5 py-2.5 rounded-full shadow-[4px_4px_0px_0px_#0369A1] active:translate-y-[2px] active:shadow-none"
           >
             <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6 stroke-[3]" />
             返回主頁
-          </HashLink>
+          </Link>
         </div>
 
         <div className="text-center mb-16 flex flex-col items-center">

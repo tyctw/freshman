@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Clock, ArrowLeft, Moon, BookOpen, Train, Activity, Coffee } from 'lucide-react';
 import { useState } from 'react';
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 import NextSteps from './NextSteps';
 
 export default function TimeCalculator() {
@@ -34,14 +34,13 @@ export default function TimeCalculator() {
     <section className="py-20 md:py-24 bg-[#FAF5FF] text-[#1E293B] min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="mb-8 flex justify-start">
-          <HashLink
-            smooth
+          <Link
             to="/#life"
             className="inline-flex items-center gap-2 bg-white text-[#9333EA] hover:bg-[#FBBF24] hover:text-[#78350F] font-black text-base sm:text-lg transition-all border-4 border-[#581C87] px-5 py-2.5 rounded-full shadow-[4px_4px_0px_0px_#581C87] active:translate-y-[2px] active:shadow-none"
           >
             <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6 stroke-[3]" />
             返回主頁
-          </HashLink>
+          </Link>
         </div>
 
         <div className="text-center mb-12 flex flex-col items-center">

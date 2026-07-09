@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Users, Clock, Zap } from 'lucide-react';
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 export default function Life() {
   return (
@@ -68,21 +68,19 @@ export default function Life() {
               viewport={{ once: true }}
               className="mt-8 flex flex-col sm:flex-row gap-4"
             >
-              <HashLink 
-                smooth
+              <Link 
                 to="/club-selection" 
                 className="inline-flex items-center justify-center gap-2 bg-[#FBBF24] text-[#78350F] px-6 py-3 rounded-full font-black text-lg border-4 border-[#B45309] shadow-[4px_4px_0px_0px_#B45309] hover:-translate-y-1 active:translate-y-[2px] active:shadow-none transition-all"
               >
                 <Zap className="w-5 h-5 stroke-[3]" />
                 查看社團選擇指南
-              </HashLink>
-              <HashLink 
-                smooth
+              </Link>
+              <Link 
                 to="/club-pitfalls" 
                 className="inline-flex items-center justify-center gap-2 bg-white text-[#BE123C] px-6 py-3 rounded-full font-black text-lg border-4 border-[#BE123C] shadow-[4px_4px_0px_0px_#BE123C] hover:-translate-y-1 active:translate-y-[2px] active:shadow-none transition-all"
               >
                 查看社團避雷指南
-              </HashLink>
+              </Link>
             </motion.div>
           </motion.div>
           <motion.div

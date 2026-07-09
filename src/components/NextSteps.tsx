@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 interface NextStepProps {
   steps: {
@@ -33,8 +33,7 @@ export default function NextSteps({ steps }: NextStepProps) {
             transition={{ delay: index * 0.1 }}
             className="h-full"
           >
-            <HashLink
-              smooth
+            <Link
               to={step.link}
               className={`block h-full bg-white border-4 ${step.borderColor} rounded-3xl p-6 shadow-[6px_6px_0px_0px_var(--tw-shadow-color)] hover:-translate-y-2 hover:shadow-[8px_8px_0px_0px_var(--tw-shadow-color)] transition-all group`}
               style={{ '--tw-shadow-color': step.borderColor.replace('border-', '') } as any}
@@ -49,7 +48,7 @@ export default function NextSteps({ steps }: NextStepProps) {
               </div>
               <h4 className="text-xl font-black text-slate-800 mb-2">{step.title}</h4>
               <p className="font-bold text-slate-600 leading-relaxed text-sm sm:text-base">{step.desc}</p>
-            </HashLink>
+            </Link>
           </motion.div>
         ))}
       </div>

@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { ShieldAlert, AlertTriangle, ArrowLeft } from 'lucide-react';
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 import NextSteps from './NextSteps';
 
 const pitfallTips = [
@@ -31,14 +31,13 @@ export default function ClubPitfalls() {
     <section className="py-20 md:py-24 bg-[#FFF1F2] text-[#1E293B] min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="mb-8 flex justify-start">
-          <HashLink
-            smooth
+          <Link
             to="/club-selection"
             className="inline-flex items-center gap-2 bg-white text-[#F43F5E] hover:bg-[#FBBF24] hover:text-[#78350F] font-black text-base sm:text-lg transition-all border-4 border-[#9F1239] px-5 py-2.5 rounded-full shadow-[4px_4px_0px_0px_#9F1239] active:translate-y-[2px] active:shadow-none"
           >
             <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6 stroke-[3]" />
             返回社團選擇指南
-          </HashLink>
+          </Link>
         </div>
 
         <div className="text-center mb-16 flex flex-col items-center">

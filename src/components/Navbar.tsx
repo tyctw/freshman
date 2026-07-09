@@ -1,10 +1,11 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { BookOpen, Map, Compass, CheckCircle, Menu, X, GitCompare, Zap, AlertTriangle, HelpCircle, Clock } from 'lucide-react';
+import { BookOpen, Map, Compass, CheckCircle, Menu, X, GitCompare, Zap, AlertTriangle, HelpCircle, Clock, Sparkles } from 'lucide-react';
 import { useState } from 'react';
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 const navItems = [
   { name: '首頁', href: '/', icon: Compass },
+  { name: '屬性鑑定', href: '/persona', icon: Sparkles },
   { name: '高中 VS 高職', href: '/academic-comparison', icon: GitCompare },
   { name: '社團選擇', href: '/club-selection', icon: CheckCircle },
   { name: '社團避雷', href: '/club-pitfalls', icon: Zap },
@@ -19,8 +20,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 bg-white z-50 border-b-4 border-[#FBBF24]" aria-label="主要導覽">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <HashLink
-            smooth
+          <Link
             to="/#hero"
             className="flex-shrink-0 flex items-center cursor-pointer gap-2"
           >
@@ -30,7 +30,7 @@ export default function Navbar() {
             <span className="text-xl md:text-2xl font-black tracking-tight text-[#1E293B]">
               新高一導航站
             </span>
-          </HashLink>
+          </Link>
           <div className="hidden lg:flex items-center space-x-6">
             <div className="flex space-x-4 font-bold text-sm uppercase tracking-wide">
               {navItems.map((item, index) => (
@@ -40,24 +40,23 @@ export default function Navbar() {
                   transition={{ delay: index * 0.1 }}
                   key={item.name}
                 >
-                  <HashLink
-                    smooth
+                  <Link
                     to={item.href}
                     className="text-slate-600 hover:text-[#F59E0B] flex items-center p-2 transition-colors relative group"
                   >
                     {item.name}
                     <span className="absolute bottom-0 left-0 w-0 h-1 bg-[#F59E0B] transition-all group-hover:w-full rounded-full"></span>
-                  </HashLink>
+                  </Link>
                 </motion.div>
               ))}
             </div>
             <a href="https://tyctw.github.io/shared/" target="_blank" rel="noopener noreferrer" className="bg-white border-2 border-[#1E293B] text-[#1E293B] px-4 py-2 rounded-full font-bold text-sm shadow-[4px_4px_0px_0px_#1E293B] hover:translate-y-0.5 active:shadow-none transition-all flex items-center gap-2">
-              <span>會考錄取分享</span>
+              <span>會錄取分享</span>
             </a>
           </div>
           <div className="lg:hidden flex items-center gap-3">
              <a href="https://tyctw.github.io/shared/" target="_blank" rel="noopener noreferrer" className="bg-[#1E293B] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-bold shadow-[2px_2px_0px_0px_#FBBF24] active:shadow-none active:translate-y-[2px] transition-all">
-               會考錄取分享
+               會錄取分享
              </a>
              <button 
                onClick={() => setIsOpen(!isOpen)}
@@ -104,8 +103,7 @@ export default function Navbar() {
               </div>
               <div className="px-4 py-6 space-y-3 font-bold text-base flex flex-col flex-1 overflow-y-auto bg-white">
                 {navItems.map((item) => (
-                  <HashLink
-                    smooth
+                  <Link
                     key={item.name}
                     to={item.href}
                     onClick={() => setIsOpen(false)}
@@ -115,7 +113,7 @@ export default function Navbar() {
                       <item.icon className="w-5 h-5 stroke-[3]" />
                     </div>
                     {item.name}
-                  </HashLink>
+                  </Link>
                 ))}
               </div>
             </motion.div>

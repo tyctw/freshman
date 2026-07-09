@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Sparkles, ArrowRight } from 'lucide-react';
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 import Countdown from './Countdown';
 
 export default function Hero() {
@@ -47,23 +47,28 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 pt-4"
+            className="flex flex-col sm:flex-row justify-center flex-wrap gap-4 sm:gap-6 pt-4"
           >
-            <HashLink
-              smooth
+            <Link
+              to="/persona"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 sm:px-8 text-base text-[#1E293B] bg-[#FBBF24] border-4 border-[#1E293B] rounded-full font-black shadow-[4px_4px_0px_0px_#1E293B] md:shadow-[6px_6px_0px_0px_#1E293B] active:translate-y-[2px] md:hover:translate-y-0.5 active:shadow-none transition-all"
+            >
+              <Sparkles className="w-5 h-5 mr-2 stroke-[3]" />
+              測測看！高中生屬性鑑定
+            </Link>
+            <Link
               to="/academic-comparison#academics"
               className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 sm:px-8 text-base text-[#F43F5E] bg-white rounded-full font-black shadow-[4px_4px_0px_0px_#9F1239] md:shadow-[6px_6px_0px_0px_#9F1239] active:translate-y-[2px] md:hover:translate-y-0.5 active:shadow-none transition-all"
             >
               學習模式大翻轉
               <ArrowRight className="w-5 h-5 ml-2 font-black" />
-            </HashLink>
-            <HashLink
-              smooth
+            </Link>
+            <Link
               to="/#survival"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 sm:px-8 text-base text-white bg-[#F59E0B] border-4 border-[#FBBF24] rounded-full font-black shadow-[4px_4px_0px_0px_#78350F] md:shadow-[6px_6px_0px_0px_#78350F] active:translate-y-[2px] md:hover:translate-y-0.5 active:shadow-none transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 sm:px-8 text-base text-white bg-transparent border-4 border-white/50 hover:bg-white/10 rounded-full font-black transition-all"
             >
-              學長姐的血淚生存法則
-            </HashLink>
+              生存法則
+            </Link>
           </motion.div>
         </div>
       </div>
