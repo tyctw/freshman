@@ -16,14 +16,23 @@ interface Classmate {
 const classmates: Classmate[] = [
   { id: 'ur1', name: '假裝沒讀書的學霸', rarity: 'UR', desc: '考前哀嚎自己都沒看，發考卷時卻總是接近滿分。', quote: '「我昨天真的都在打傳說啦，不知道為什麼猜這麼準...」', color: 'from-fuchsia-500 to-purple-600' },
   { id: 'ur2', name: '提醒老師收作業的班長', rarity: 'UR', desc: '全班的公敵，正義的化身。總是能在老師快忘記時大聲提醒。', quote: '「老師！你還沒收昨天的小考考卷！」', color: 'from-rose-500 to-red-600' },
+  { id: 'ur3', name: '筆記之神', rarity: 'UR', desc: '總是能借出像印刷品一樣精美、重點分明的彩色筆記。', quote: '「這是我昨天整理的，你可以拿去印沒關係。」', color: 'from-rose-500 to-red-600' },
+  { id: 'ur4', name: '老師剋星', rarity: 'UR', desc: '總能問出連老師都被問倒的超綱問題，讓全班免於上課。', quote: '「老師，關於這題的第三種特例，如果我們代入量子力學...」', color: 'from-fuchsia-500 to-purple-600' },
   { id: 'ssr1', name: '福利社百米跑者', rarity: 'SSR', desc: '第四節下課鐘聲一響，瞬間消失在教室，跑速媲美奧運選手。', quote: '「阿姨！我要一個雞排便當加奶茶！」', color: 'from-amber-400 to-orange-500' },
   { id: 'ssr2', name: '下課預言家', rarity: 'SSR', desc: '內建生理時鐘，總能在下課前10秒開始發出拉拉鍊、收書包的聲音。', quote: '（拉鍊聲）（拉椅子聲）（眼神充滿殺氣）', color: 'from-amber-400 to-orange-500' },
+  { id: 'ssr3', name: '情報頭子', rarity: 'SSR', desc: '全校八卦、哪堂課小考、哪家外送好吃他都知道。', quote: '「欸我跟你說，隔壁班那個誰跟那個誰在一起了！」', color: 'from-amber-400 to-orange-500' },
+  { id: 'ssr4', name: '隨身超商', rarity: 'SSR', desc: '抽屜裡有各式各樣的零食，甚至連泡麵跟熱水壺都有。', quote: '「你要吃科學麵還是巧克力？我這裡還有果凍。」', color: 'from-amber-400 to-orange-500' },
   { id: 'sr1', name: '防曬滿級大師', rarity: 'SR', desc: '體育課永遠躲在樹下或陰影處，撐傘是基本，外套是標配。', quote: '「好熱喔，我可以坐在這裡幫你們顧水壺嗎？」', color: 'from-blue-400 to-indigo-500' },
   { id: 'sr2', name: '行動電源供應商', rarity: 'SR', desc: '包包裡隨時備有3顆行動電源跟各種類型的充電線。', quote: '「你要Type-C還是Lightning？我這裡都有。」', color: 'from-blue-400 to-indigo-500' },
+  { id: 'sr3', name: '衛生股長轉世', rarity: 'SR', desc: '看到黑板沒擦、地板有垃圾就會渾身不對勁。', quote: '「你們值日生是不是沒倒垃圾？快去倒！」', color: 'from-blue-400 to-indigo-500' },
+  { id: 'sr4', name: '遲到精算師', rarity: 'SR', desc: '總是能在鐘聲響完的最後0.5秒完美滑進教室。', quote: '「教官好！老師好！我還沒遲到！」', color: 'from-blue-400 to-indigo-500' },
   { id: 'r1', name: '立可帶殺手', rarity: 'R', desc: '常常借別人的立可帶，還回來的時候不是斷帶就是用完。', quote: '「欸你的立可帶好像本來就壞了耶？」', color: 'from-emerald-400 to-teal-500' },
   { id: 'r2', name: '衛生紙乞丐', rarity: 'R', desc: '三年來從來沒自己買過衛生紙，靠著四處化緣度日。', quote: '「欸你有衛生紙嗎？借我抽兩張！」', color: 'from-emerald-400 to-teal-500' },
+  { id: 'r3', name: '借筆魔人', rarity: 'R', desc: '每天來學校只帶一個人，其他全靠跟左右鄰居借。', quote: '「欸借我一隻紅筆，啊還有黑筆，順便立可帶借一下。」', color: 'from-emerald-400 to-teal-500' },
+  { id: 'r4', name: '冷氣控', rarity: 'R', desc: '只要溫度高於25度就會開始躁動不安，瘋狂尋找遙控器。', quote: '「好熱喔，誰把冷氣關了啦！開到22度啦！」', color: 'from-emerald-400 to-teal-500' },
   { id: 'n1', name: '永遠在睡覺的人', rarity: 'N', desc: '早自習睡、國文課睡、連下課都在睡。不知道晚上都在幹嘛。', quote: '「（均勻的呼吸聲）」', color: 'from-slate-400 to-slate-500' },
-  { id: 'n2', name: '背景路人甲', rarity: 'N', desc: '安靜上課，安靜下課，常常被老師點名時找不到人。', quote: '「......有，我坐在這裡。」', color: 'from-slate-400 to-slate-500' }
+  { id: 'n2', name: '背景路人甲', rarity: 'N', desc: '安靜上課，安靜下課，常常被老師點名時找不到人。', quote: '「......有，我坐在這裡。」', color: 'from-slate-400 to-slate-500' },
+  { id: 'n3', name: '放學急先鋒', rarity: 'N', desc: '每天一打鐘收拾東西的速度比誰都快，第一個衝出教室。', quote: '「掰，我補習要遲到了，先走囉！」', color: 'from-slate-400 to-slate-500' }
 ];
 
 const rarityWeights: Record<Rarity, number> = {
